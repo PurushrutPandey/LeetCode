@@ -1,4 +1,7 @@
-class Solution {
+import java.util.*;
+
+public class Solution {
+
     public int longestValidParentheses(String s) {
         Stack<Integer> stack = new Stack<>();
         stack.push(-1);
@@ -18,5 +21,11 @@ class Solution {
         }
 
         return max_len;        
+    }
+
+    public static void main(String[] args) {
+        Solution sol = new Solution();
+        String input = "(()())";
+        System.out.println(sol.longestValidParentheses(input));
     }
 }
